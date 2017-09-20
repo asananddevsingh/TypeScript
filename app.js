@@ -93,7 +93,7 @@ var yourUserData = {
     name: "Praveen",
     age: 32
 };
-// complex object
+//14: complex types
 var myComplex = {
     data: [10, 20, 40],
     output: function (all) {
@@ -107,3 +107,47 @@ var yourComplex = {
         return this.data;
     }
 };
+//15: union types (when there is posibility of having more than one type and we don't want to use any)
+var mySalary;
+mySalary = 100;
+mySalary = '100';
+// mySalary = [100]; This is not posible where as we can assign both number and string to mySalary variable.
+//16: check types => by using typeof keyword.
+var anything = 14;
+if (typeof anything === 'number') {
+    console.log('This is number');
+}
+//17: never type (When any function is not going to return anything, NOT even void e.g. Exception's)
+function neverReturns() {
+    throw new Error('My Error');
+}
+//neverReturns();
+//18: nullable types (this check can be controlled by the flag "strictNullChecks": true/false in tsconfig.js).
+var canNotBeNull = 12;
+// canNotBeNull = null; => This is not possible.
+// Here we are making it nullable by assigning type 'null' as union.
+var canBeNull = 12;
+canBeNull = null;
+// Because implicitly it's type is null.
+var canAlsoBeNull = null;
+canAlsoBeNull = 4;
+canAlsoBeNull = null;
+canAlsoBeNull = 'ABC';
+// Because be default it's type is any.
+var canAlsoBeAgainNull;
+canAlsoBeAgainNull = 1001;
+canAlsoBeAgainNull = null;
+var bankAccount = {
+    money: 2000,
+    deposit: function (value) {
+        this.money += value;
+    }
+};
+var myself = {
+    name: "Anand Dev",
+    bankAccount: bankAccount,
+    hobbies: ['reading', 'running']
+};
+myself.bankAccount.deposit(3000);
+console.log(myself);
+/************************ Excercise - END ******************************/ 
