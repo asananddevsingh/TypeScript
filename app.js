@@ -150,4 +150,6 @@ var myself = {
 };
 myself.bankAccount.deposit(3000);
 console.log(myself);
-/************************ Excercise - END ******************************/ 
+/************************ Excercise - END ******************************/
+var myVar = "Anand";
+//myVar = 30; 

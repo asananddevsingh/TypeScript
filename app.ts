@@ -214,3 +214,6 @@ myself.bankAccount.deposit(3000);
 console.log(myself);
 
 /************************ Excercise - END ******************************/
+
+let myVar : string = "Anand";
+//myVar = 30;
