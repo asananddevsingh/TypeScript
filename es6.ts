@@ -108,3 +108,18 @@ const userAge = userData.age;
 const {username, age, salary: userSalary} = userData; // Here userSalary is alias to salary property.
 
 console.log('username: ', username, '- age: ', age , '- salary: ', userSalary);
+
+//6. Template Literals;
+const myCompany = "Picturewale";
+
+// Traditional way
+let greetings = 'Welcome to ' + myCompany + 'How may I help you.';
+console.log(greetings);
+
+// Using backticks (`) 
+greetings = `Welcome!
+to ${myCompany} 
+How may I help you.`;
+
+console.log('Using template literals: ', greetings);
+

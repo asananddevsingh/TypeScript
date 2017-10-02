@@ -82,5 +82,13 @@ var userData = { username: "Anand", age: 30, salary: 100 };
 var userName = userData.username;
 var userAge = userData.age;
 // Destructuring way
-var username = userData.username, age = userData.age, userSalary = userData.salary;
+var username = userData.username, age = userData.age, userSalary = userData.salary; // Here userSalary is alias to salary property.
 console.log('username: ', username, '- age: ', age, '- salary: ', userSalary);
+//6. Template Literals;
+var myCompany = "Picturewale";
+// Traditional way
+var greetings = 'Welcome to ' + myCompany + 'How may I help you.';
+console.log(greetings);
+// Using backticks (`) 
+greetings = "Welcome!\nto " + myCompany + " \nHow may I help you.";
+console.log('Using template literals: ', greetings);
