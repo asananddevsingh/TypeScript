@@ -86,6 +86,25 @@ function makeArray(name: string , ...restValues: number[]): number []{
 
 console.log(makeArray("Anand", 1,2,3,4,5));
 
-// Ex. 2 => Rest values.
-let [n1, n2, ...n] = [1,2,3,4,5,6];
-console.log('Rest values:', n);
+//5. Destructuring
+console.log('DESTRUCTURING');
+
+// With Array
+const hobbies = ['running', 'playing', 'reading'];
+
+const [hobby1, ...restHobbies] = hobbies;
+console.log('First hobby:',  hobby1);
+console.log('Rest of hobbies:',  restHobbies);
+
+// With Object
+
+const userData = {username: "Anand", age: 30, salary:100};
+
+// Traditional way
+const userName = userData.username;
+const userAge = userData.age;
+
+// Destructuring way
+const {username, age, salary: userSalary} = userData; // Here userSalary is alias to salary property.
+
+console.log('username: ', username, '- age: ', age , '- salary: ', userSalary);

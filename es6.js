@@ -69,5 +69,18 @@ function makeArray(name) {
     return restValues;
 }
 console.log(makeArray("Anand", 1, 2, 3, 4, 5));
-var _a = [1, 2, 3, 4, 5, 6], n1 = _a[0], n2 = _a[1], n = _a.slice(2);
-console.log(n);
+//5. Destructuring
+console.log('DESTRUCTURING');
+// With Array
+var hobbies = ['running', 'playing', 'reading'];
+var hobby1 = hobbies[0], restHobbies = hobbies.slice(1);
+console.log('First hobby:', hobby1);
+console.log('Rest of hobbies:', restHobbies);
+// With Object
+var userData = { username: "Anand", age: 30, salary: 100 };
+// Traditional way
+var userName = userData.username;
+var userAge = userData.age;
+// Destructuring way
+var username = userData.username, age = userData.age, userSalary = userData.salary;
+console.log('username: ', username, '- age: ', age, '- salary: ', userSalary);
