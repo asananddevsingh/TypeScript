@@ -30,3 +30,44 @@ console.log(printFn("Printing..."));
 // OR => If function without any parameter.
 var greetFn = function () { return console.log('welcome'); };
 greetFn();
+//3. Default Parameters
+console.log("DEFAULT PARAMETERS");
+var countdown = function (start) {
+    if (start === void 0) { start = 4; }
+    console.log('Starting value: ', start);
+    while (start > 0) {
+        start--;
+    }
+    console.log('Done: ', start);
+};
+countdown();
+// Multiple default values.
+// Here we are using default value of 'start' in  'target' since start is defined before target
+// But can't use value of 'target' in 'start'.
+var printTable = function (tableOf, start, target) {
+    if (start === void 0) { start = 1; }
+    if (target === void 0) { target = start + 10; }
+    console.log('Table of: ', tableOf);
+    while (start < target) {
+        console.log(tableOf * start);
+        start++;
+    }
+};
+printTable(2);
+printTable(3, 1);
+//4. Rest & Spread operators.
+console.log('REST & SPREAD');
+var numbers = [1, 10, 40, -4];
+// console.log(Math.max(numbers)); //It will not work.
+console.log(Math.max.apply(Math, numbers)); // Here tripple dots '...' are spread operator.
+// Here tripple dots '...' are rest operator
+function makeArray(name) {
+    var restValues = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        restValues[_i - 1] = arguments[_i];
+    }
+    return restValues;
+}
+console.log(makeArray("Anand", 1, 2, 3, 4, 5));
+var _a = [1, 2, 3, 4, 5, 6], n1 = _a[0], n2 = _a[1], n = _a.slice(2);
+console.log(n);
