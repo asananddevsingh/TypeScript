@@ -37,7 +37,7 @@ console.log(divideNumbers(40,10));
 
 // OR => function with only one parameter.
 
-const printFn = message  => message;
+const printFn = (message:string)  => message;
 
 console.log(printFn("Printing..."));
 

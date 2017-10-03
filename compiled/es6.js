@@ -1,3 +1,4 @@
+"use strict";
 //1. let and const variables
 var myBlockScoveVar = "Variable with block scope";
 var maxPercentage = 100;
